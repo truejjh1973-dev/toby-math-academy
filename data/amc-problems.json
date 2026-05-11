@@ -1,0 +1,41 @@
+[
+  {
+    "contest": "AMC 8",
+    "year": 2024,
+    "problem_number": 5,
+    "difficulty": "Easy",
+    "topic": "Geometry",
+    "summary": "Basic geometry reasoning problem.",
+    "thinking_process": [
+      "Identify the important geometric relationships.",
+      "Simplify the diagram mentally.",
+      "Check whether symmetry can help."
+    ]
+  },
+  {
+    "contest": "AMC 10A",
+    "year": 2023,
+    "problem_number": 12,
+    "difficulty": "Medium",
+    "topic": "Algebra",
+    "summary": "Equation manipulation and substitution.",
+    "thinking_process": [
+      "Rewrite the equation carefully.",
+      "Avoid unnecessary expansion.",
+      "Check for shortcuts."
+    ]
+  },
+  {
+    "contest": "AMC 10B",
+    "year": 2022,
+    "problem_number": 20,
+    "difficulty": "Hard",
+    "topic": "Number Theory",
+    "summary": "Divisibility and modular arithmetic.",
+    "thinking_process": [
+      "Find repeating patterns.",
+      "Apply modular arithmetic.",
+      "Test edge cases carefully."
+    ]
+  }
+]
