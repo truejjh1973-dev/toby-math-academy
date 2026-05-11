@@ -1,38 +1,38 @@
 const videos = [
-  { title: 'Factoring Basics', series: '5-Minute Math', length: '7 min', color: 'bg-[#eaf4ff] text-[#236fae]' },
-  { title: 'Avoiding Algebra Mistakes', series: 'Common Mistakes', length: '9 min', color: 'bg-[#fff4df] text-[#a76312]' },
-  { title: 'AMC Geometry Tricks', series: 'Competition Tricks', length: '11 min', color: 'bg-[#e7f7ee] text-[#247a43]' }
+  { title: 'Factoring Basics', series: '5-Minute Math', length: '7 min', color: 'bg-[#2b84d2]' },
+  { title: 'Avoiding Algebra Mistakes', series: 'Common Mistakes', length: '9 min', color: 'bg-[#f2a13a]' },
+  { title: 'AMC Geometry Tricks', series: 'Competition Tricks', length: '11 min', color: 'bg-[#5dbb63]' }
 ]
 
 export default function VideoLessonsPage() {
   return (
-    <main className="min-h-screen bg-[#f7fbff] text-[#243044]">
-      <section className="border-b border-[#dbe7f3] bg-white px-5 py-12 sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <a href="/" className="font-black text-[#2587d8]">Toby Math Academy</a>
-          <p className="mt-8 text-sm font-black uppercase tracking-[0.14em] text-[#7967d8]">Video lessons</p>
-          <h1 className="mt-3 max-w-4xl text-5xl font-black leading-tight text-[#1f2d40]">Short explanations paired with practice skills.</h1>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-[#51657c]">A video library layout that feels more like a course catalog: series, duration, topic, and a clear next action.</p>
+    <main className="min-h-screen bg-white text-[#243044]">
+      <header className="border-b border-[#d8e3ef] bg-white px-5 py-4 sm:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <a href="/" className="text-xl font-black text-[#2b84d2]">Toby Math Academy</a>
+          <a href="/register" className="rounded-md bg-[#4fb26a] px-5 py-2.5 text-sm font-bold text-white">Join now</a>
         </div>
+      </header>
+
+      <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+        <h1 className="text-5xl font-bold text-[#26364a]">Video Lessons</h1>
+        <p className="mt-3 max-w-3xl text-lg leading-8 text-[#5f7189]">Short explanations paired with practice skills, organized as a clean lesson list.</p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-5 px-5 py-12 sm:px-8 md:grid-cols-3">
-        {videos.map((video, index) => (
-          <article key={video.title} className="ixl-card overflow-hidden rounded-lg">
-            <div className="grid h-48 place-items-center bg-[#eaf7ff] px-5 text-center">
-              <div className="grid h-24 w-24 place-items-center rounded-lg bg-white text-3xl font-black text-[#2587d8] shadow-sm ring-1 ring-[#dbe7f3]">{index + 1}</div>
-            </div>
-            <div className="p-5">
-              <div className="flex items-center justify-between gap-3">
-                <span className={`rounded-lg px-3 py-2 text-xs font-black ${video.color}`}>{video.series}</span>
-                <span className="text-sm font-black text-[#6c7e95]">{video.length}</span>
+      <section className="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+        <div className="overflow-hidden rounded-md border border-[#d8e3ef] bg-white">
+          {videos.map((video, index) => (
+            <article key={video.title} className="grid gap-4 border-b border-[#d8e3ef] p-5 last:border-b-0 sm:grid-cols-[72px_1fr_120px_120px] sm:items-center">
+              <span className={`grid h-14 w-14 place-items-center rounded-md text-xl font-black text-white ${video.color}`}>{index + 1}</span>
+              <div>
+                <h2 className="text-2xl font-bold text-[#26364a]">{video.title}</h2>
+                <p className="mt-1 text-sm text-[#5f7189]">{video.series}</p>
               </div>
-              <h2 className="mt-4 text-2xl font-black text-[#243044]">{video.title}</h2>
-              <p className="mt-3 text-sm leading-6 text-[#5f7189]">Watch, answer a quick check, then continue to a matching practice skill.</p>
-              <a href="/register" className="mt-5 inline-flex rounded-lg bg-[#2587d8] px-5 py-3 text-sm font-black text-white">Watch lesson</a>
-            </div>
-          </article>
-        ))}
+              <span className="rounded-md bg-[#f1f6fb] px-3 py-2 text-center text-sm font-bold text-[#51657c]">{video.length}</span>
+              <a href="/register" className="rounded-md bg-[#eef7ff] px-3 py-2 text-center text-sm font-bold text-[#2b84d2]">Watch</a>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   )
