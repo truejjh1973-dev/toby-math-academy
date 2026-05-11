@@ -56,7 +56,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a href="/register" className="hidden rounded-lg border border-slate-300 px-4 py-2 text-sm font800 text-slate-700 transition hover:border-slate-950 hover:text-slate-950 sm:inline-flex">
+          <a href="/register" className="hidden rounded-lg border border-slate-300 px-4 py-2 text-sm font-extrabold text-slate-700 transition hover:border-slate-950 hover:text-slate-950 sm:inline-flex">
             Sign in
           </a>
           <a href="/register" className="rounded-lg bg-slate-950 px-4 py-2 text-sm font-extrabold text-white shadow-sm transition hover:bg-slate-800">
@@ -76,7 +76,7 @@ export default function HomePage() {
             A calmer way to build serious math confidence.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-650 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
             Toby Math Academy turns school math, contest prep, classic examples, and short video lessons into one guided learning workspace for middle and high school students.
           </p>
 
@@ -114,7 +114,7 @@ export default function HomePage() {
             />
             <div className="grid gap-0 md:grid-cols-[1fr_0.78fr]">
               <div className="p-5 sm:p-6">
-                <div className="mb-5 flex items-center justify-between">
+                <div className="mb-5 flex items-center justify-between gap-4">
                   <div>
                     <p className="text-sm font-black uppercase tracking-[0.18em] text-slate-500">Today</p>
                     <h2 className="mt-1 text-2xl font-black">Student dashboard</h2>
@@ -126,7 +126,7 @@ export default function HomePage() {
                   {weeklyPlan.map((item) => (
                     <div key={item.day} className="grid grid-cols-[44px_1fr_72px] items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 px-3 py-3">
                       <span className="text-sm font-black text-slate-500">{item.day}</span>
-                      <span className="text-sm font-bold text-slate-850">{item.task}</span>
+                      <span className="text-sm font-bold text-slate-800">{item.task}</span>
                       <span className="rounded-md bg-white px-2 py-1 text-center text-xs font-black text-slate-600 ring-1 ring-slate-200">{item.status}</span>
                     </div>
                   ))}
@@ -159,7 +159,7 @@ export default function HomePage() {
 
           <div className="grid gap-5 lg:grid-cols-3">
             {learningTracks.map((track) => (
-              <article key={track.title} className="rounded-lg border border-slate-250 bg-[#fbfaf7] p-5 shadow-sm">
+              <article key={track.title} className="rounded-lg border border-slate-200 bg-[#fbfaf7] p-5 shadow-sm">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-sm font-black text-slate-500">{track.level}</p>
@@ -188,7 +188,7 @@ export default function HomePage() {
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-emerald-700">Practice room</p>
           <h2 className="mt-2 text-3xl font-black sm:text-4xl">Classic examples become a daily routine.</h2>
-          <p className="mt-4 text-base leading-7 text-slate-650">Students can move from hint to full solution, tag mistakes, and connect every problem back to a lesson.</p>
+          <p className="mt-4 text-base leading-7 text-slate-600">Students can move from hint to full solution, tag mistakes, and connect every problem back to a lesson.</p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
