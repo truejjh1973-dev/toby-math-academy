@@ -1,66 +1,56 @@
 const grades = [
-  { title: 'Grade 8 Math', code: '8', count: '55 skills', color: 'bg-[#e7f7ee] text-[#247a43]', topics: ['Linear Relations', 'Pythagorean Theorem', 'Probability', 'Integer operations', 'Surface area'] },
-  { title: 'Grade 9 Math', code: '9', count: '64 skills', color: 'bg-[#eaf4ff] text-[#236fae]', topics: ['Polynomials', 'Statistics', 'Linear Equations', 'Scale factors', 'Exponents'] },
-  { title: 'Pre-Calculus 10', code: '10', count: '72 skills', color: 'bg-[#fff4df] text-[#a76312]', topics: ['Factoring', 'Radicals', 'Trigonometry', 'Functions', 'Systems'] },
-  { title: 'Pre-Calculus 11', code: '11', count: '68 skills', color: 'bg-[#f0edff] text-[#5a48b8]', topics: ['Quadratics', 'Transformations', 'Sequences', 'Rational expressions', 'Sine law'] }
+  { title: 'Grade 8 Math', code: '8', count: '55 skills', color: 'bg-[#5dbb63]', topics: ['Linear Relations', 'Pythagorean Theorem', 'Probability', 'Integer operations', 'Surface area'] },
+  { title: 'Grade 9 Math', code: '9', count: '64 skills', color: 'bg-[#2b84d2]', topics: ['Polynomials', 'Statistics', 'Linear Equations', 'Scale factors', 'Exponents'] },
+  { title: 'Pre-Calculus 10', code: '10', count: '72 skills', color: 'bg-[#f2a13a]', topics: ['Factoring', 'Radicals', 'Trigonometry', 'Functions', 'Systems'] },
+  { title: 'Pre-Calculus 11', code: '11', count: '68 skills', color: 'bg-[#7b65d8]', topics: ['Quadratics', 'Transformations', 'Sequences', 'Rational expressions', 'Sine law'] }
 ]
 
-const domains = ['Number sense', 'Algebra', 'Geometry', 'Data', 'Functions', 'Contest links']
+const domains = ['All', 'Number sense', 'Algebra', 'Geometry', 'Data', 'Functions']
 
 export default function BCSchoolMathPage() {
   return (
-    <main className="min-h-screen bg-[#f7fbff] text-[#243044]">
-      <section className="border-b border-[#dbe7f3] bg-[#eaf7ff] px-5 py-12 sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <a href="/" className="font-black text-[#2587d8]">Toby Math Academy</a>
-          <div className="mt-8 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.14em] text-[#2587d8]">BC curriculum</p>
-              <h1 className="mt-3 text-5xl font-black leading-tight text-[#1f2d40]">Choose a grade. Build one skill at a time.</h1>
-              <p className="mt-4 text-lg leading-8 text-[#51657c]">A clearer IXL-style skill map for school math, with quick practice entry points and future progress tracking.</p>
-            </div>
-            <div className="ixl-card rounded-lg p-5">
-              <p className="text-sm font-black text-[#49b86f]">Recommended next</p>
-              <h2 className="mt-2 text-2xl font-black">Pre-Calculus 10: Factoring</h2>
-              <div className="mt-4 h-3 rounded-full bg-[#e8f2fb]"><div className="h-3 w-2/3 rounded-full bg-[#49b86f]" /></div>
-              <p className="mt-3 text-sm font-bold text-[#5f7189]">8 of 12 prerequisite skills ready</p>
-            </div>
-          </div>
+    <main className="min-h-screen bg-white text-[#243044]">
+      <header className="border-b border-[#d8e3ef] bg-white px-5 py-4 sm:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <a href="/" className="text-xl font-black text-[#2b84d2]">Toby Math Academy</a>
+          <a href="/register" className="rounded-md bg-[#4fb26a] px-5 py-2.5 text-sm font-bold text-white">Join now</a>
         </div>
-      </section>
+      </header>
 
-      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-8">
-        <div className="flex flex-wrap gap-3">
+      <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+        <h1 className="text-5xl font-bold text-[#26364a]">BC School Math</h1>
+        <p className="mt-3 max-w-3xl text-lg leading-8 text-[#5f7189]">A grade-by-grade skill list for BC students, organized like a practice catalogue instead of a marketing page.</p>
+
+        <div className="mt-8 flex flex-wrap gap-2 border-b border-[#d8e3ef] pb-5">
           {domains.map((domain) => (
-            <button key={domain} className="rounded-lg border border-[#c7dced] bg-white px-4 py-2 text-sm font-black text-[#51657c] shadow-sm hover:border-[#2587d8] hover:text-[#2587d8]">{domain}</button>
+            <button key={domain} className="rounded-md border border-[#c7d6e6] bg-white px-4 py-2 text-sm font-bold text-[#51657c] hover:border-[#2b84d2] hover:text-[#2b84d2]">{domain}</button>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-5 px-5 pb-14 sm:px-8 md:grid-cols-2">
-        {grades.map((grade) => (
-          <article key={grade.title} className="ixl-card rounded-lg p-5">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <span className={`grid h-14 w-14 place-items-center rounded-lg text-xl font-black ${grade.color}`}>{grade.code}</span>
+      <section className="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+        <div className="overflow-hidden rounded-md border border-[#d8e3ef] bg-white">
+          {grades.map((grade) => (
+            <article key={grade.title} className="border-b border-[#d8e3ef] last:border-b-0">
+              <div className="grid gap-4 bg-[#f8fbff] p-5 sm:grid-cols-[70px_1fr_120px] sm:items-center">
+                <span className={`grid h-14 w-14 place-items-center rounded-md text-xl font-black text-white ${grade.color}`}>{grade.code}</span>
                 <div>
-                  <h2 className="text-2xl font-black text-[#243044]">{grade.title}</h2>
-                  <p className="mt-1 text-sm font-black text-[#6c7e95]">{grade.count}</p>
+                  <h2 className="text-2xl font-bold text-[#26364a]">{grade.title}</h2>
+                  <p className="mt-1 text-sm text-[#5f7189]">Curriculum-aligned school math practice</p>
                 </div>
+                <span className="rounded-md bg-white px-3 py-2 text-center text-sm font-bold text-[#2b84d2] ring-1 ring-[#d8e3ef]">{grade.count}</span>
               </div>
-              <a href="/register" className="rounded-lg bg-[#49b86f] px-4 py-2 text-sm font-black text-white">Practice</a>
-            </div>
-
-            <div className="mt-5 grid gap-2">
-              {grade.topics.map((topic, index) => (
-                <div key={topic} className="flex items-center justify-between rounded-lg border border-[#dbe7f3] bg-[#fbfdff] px-4 py-3">
-                  <span className="font-bold text-[#243044]">{topic}</span>
-                  <span className="rounded-md bg-white px-2 py-1 text-xs font-black text-[#6c7e95] ring-1 ring-[#dbe7f3]">{index + 6} skills</span>
-                </div>
-              ))}
-            </div>
-          </article>
-        ))}
+              <div className="grid gap-0 sm:grid-cols-2 lg:grid-cols-5">
+                {grade.topics.map((topic, index) => (
+                  <a key={topic} href="/register" className="border-t border-[#d8e3ef] px-4 py-4 hover:bg-[#f8fbff] lg:border-r lg:last:border-r-0">
+                    <span className="block font-bold text-[#26364a]">{topic}</span>
+                    <span className="mt-1 block text-sm text-[#5f7189]">{index + 6} skills</span>
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   )
