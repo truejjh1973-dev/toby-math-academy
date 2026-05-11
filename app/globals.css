@@ -2,8 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+  --sky: #eaf7ff;
+  --ink: #243044;
+  --muted: #5f7189;
+  --blue: #2587d8;
+  --green: #49b86f;
+  --orange: #f4a340;
+  --violet: #7967d8;
+  --line: #dbe7f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f7fbff;
+  color: var(--ink);
+  font-family: ui-sans-serif, "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+select {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #ffe08a;
+  color: #1d2a3d;
+}
+
+.ixl-card {
+  border: 1px solid var(--line);
   background: #ffffff;
+  box-shadow: 0 10px 24px rgba(35, 74, 121, 0.08);
+}
+
+.ixl-soft-grid {
+  background-image:
+    linear-gradient(rgba(37, 135, 216, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 135, 216, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
