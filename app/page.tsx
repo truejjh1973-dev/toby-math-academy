@@ -31,9 +31,17 @@ export default function HomePage() {
               三种个人数学教育网站首页设计方案
             </h1>
           </div>
-          <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600 md:text-right">
-            从可信赖的学院风、适合低龄学生的趣味风，到面向竞赛冲刺的高端深色风格，展示同一个品牌的三种视觉表达。
-          </p>
+          <div className="mt-5 max-w-xl space-y-4 md:text-right">
+            <p className="text-lg leading-8 text-slate-600">
+              从可信赖的学院风、适合低龄学生的趣味风，到面向竞赛冲刺的高端深色风格，展示同一个品牌的三种视觉表达。
+            </p>
+            <a
+              href="/design-demos"
+              className="inline-flex rounded-full bg-slate-950 px-6 py-3 text-sm font-black text-white shadow-lg shadow-slate-950/15"
+            >
+              打开独立演示界面
+            </a>
+          </div>
         </div>
 
         <div className="space-y-10">
